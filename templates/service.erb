@@ -1,0 +1,19 @@
+[Unit]
+Description=<%= @description %>
+
+[Service]
+ExecStart=<%= @execstart %>
+<% if defined?(@execstop) -%>
+ExecStop=<%= @execstop %>
+<% end -%>
+<% if defined?(@restart) -%>
+Restart=<%= @restart %>
+<% end -%>
+User=<%= @user %>
+Group=<%= @group %>
+<% if defined?(@type) -%>
+Type=<%= @type %>
+<% end -%>
+
+[Install]
+WantedBy=multi-user.target

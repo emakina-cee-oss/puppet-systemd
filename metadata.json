@@ -1,0 +1,15 @@
+{
+  "name": "dd/systemd",
+  "version": "0.1.0",
+  "author": "dd",
+  "summary": "Puppet Module to manage systemd services, sockets and timers",
+  "license": "Beerware",
+  "source": "https://github.com/the-diamond-dogs-group-oss/puppet-systemd",
+  "project_page": "https://github.com/the-diamond-dogs-group-oss/puppet-systemd",
+  "issues_url": "https://github.com/the-diamond-dogs-group-oss/puppet-systemd/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+

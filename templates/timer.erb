@@ -1,0 +1,16 @@
+[Unit]
+Description=<%= @description %>
+
+[Timer]
+<% if defined?(@monotonic) -%>
+<% @monotonic.each do |monotonictype, timespan| %>
+<%= @monotonictype %>=<%= @timespan %>
+<% end %>
+<% end -%>
+<% if defined?(@oncalendar) -%>
+OnCalendar=<%= @oncalendar %>
+Persistent=<%= @persistent %>
+<% end -%>
+
+[Install]
+WantedBy=timers.target
