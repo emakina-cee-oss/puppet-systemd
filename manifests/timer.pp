@@ -1,7 +1,7 @@
 define systemd::timer (
                           $monotonic=undef,
                           $oncalendar=undef,
-                          $persistent='true',
+                          $persistent=true,
                           $servicename=$name,
                           $description,
                         ) {
