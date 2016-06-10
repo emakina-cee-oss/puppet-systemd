@@ -15,11 +15,6 @@ define systemd::service (
     path        => '/bin:/sbin:/usr/bin:/usr/sbin'
   }
 
-  if ! defined(Class['systemd'])
-  {
-    fail('You must include the systemd base class before using any systemd defined resources')
-  }
-
   if ($type != 'oneshot') {
     validate_re($restart, [ '^always$', '^no$', '^on-\w+$'], "Not a supported restart type: ${restart}")
   }
