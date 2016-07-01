@@ -9,12 +9,6 @@ define systemd::service (
                           $type='forking',
                         ) {
 
-  exec { 'systemctl reload':
-    command     => 'systemctl daemon-reload',
-    refreshonly => true,
-    path        => '/bin:/sbin:/usr/bin:/usr/sbin'
-  }
-
   if ($type != 'oneshot') {
     validate_re($restart, [ '^always$', '^no$', '^on-\w+$'], "Not a supported restart type: ${restart}")
   }
