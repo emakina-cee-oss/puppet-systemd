@@ -3,5 +3,6 @@ Gemfile.lock
 vendor/
 spec/fixtures/
 .bundle/
+.project
 coverage/
 log/
